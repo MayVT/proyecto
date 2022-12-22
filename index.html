@@ -62,13 +62,11 @@
             <!--SECTION CON IMAGEN DE LANDING -->
             <section class="landing-home">
                 <div class="container">
-
                     <picture>
                         <source srcset="img/desktop.jpg" media="(min-width: 850px)">
                         <source srcset="img/mobile.jpg" media="(max-width: 850px)">
                         <img class="landing-home__image" src="img/desktop.jpg" alt="">
                     </picture>
-
                 </div>
             </section>
             <!-- SECTION INFO, con enlace a "disenyo web" -->
@@ -89,9 +87,9 @@
                     <div class="subcontainer__image">
                         <img class="about__foto scroll-efecto-image"
                              src="img/aboutme-image.jpeg" alt="foto personal"
-                             x-data="{ show: false}"
-                             x-intersect="show = true"
-                             :class="show ? 'scroll-efecto-image--show' : ''"
+                             x-data="{ mostrar: false}"
+                             x-intersect="mostrar = true"
+                             :class="mostrar ? 'scroll-efecto-image--show' : ''"
                         >
                     </div>
                     <div class="subcontainer__text">
