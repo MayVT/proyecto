@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <title>Mayte Valls | Sobre mi</title>
+        <link rel="icon" type="image/png" href="favicon.png">
+        <!-- FALTA AÑADIR PLANTILLA -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <!-- Css -->
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 850px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 850px)">
+        <!-- fin CSS -->
+        <!-- JavaScript -->
+        <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+        <script src="https://unpkg.com/alpinejs" defer></script>
+        <!-- fin JavaScript -->
+    </head>
+    <body>
+    <!--HEADER-->
+    <header
+            class="header"
+            x-data="{ open: false, isTopScroll: true }" @scroll.window="isTopScroll = window.pageYOffset === 0"
+            :class="isTopScroll ? '' : 'header--scroll'"
+    >
+        <div class="container">
+            <a class="header__logo" href="index.html">
+                <img class="header__image" src="img/logo.png" alt="logo">
+            </a>
+            <!-- Button con icono para abrir el menú, ANTES DEL NAV -->
+            <button class="header__open" @click="open = true" >
+                <img src="img/icons/menu_icon_open.svg" alt="Abrir menu">
+            </button>
+            <!-- Nav-->
+            <nav class="nav" :class="open ? 'nav--show' : ''">
+                <!-- Imagen de logo para mostrar en el menú abierto -->
+                <div class="nav__container-logo">
+                    <a class="nav__logo" href="index.html">
+                        <img class="header__image" src="img/logo.png" alt="logo">
+                    </a>
+                </div>
+                <!-- Button con icono para cerrar el menú, DENTRO DEL NAV-->
+                <div class="nav__container-button">
+                    <button class="header__close" @click="open = false">
+                        <img src="img/icons/menu_icon_close.svg" alt="Cerrar menu">
+                    </button>
+                </div>
+                <div class="nav__container-links">
+                    <ul class="nav__ul">
+                        <li><a href="index.html" class="link nav__link">Inicio</a></li>
+                        <li><a href="sobre_mi.html" class="link nav__link nav__link--selected">Sobre mi</a></li>
+                        <li><a href="portfolio.html" class="link nav__link">Portfolio</a></li>
+                        <li><a href="disenyo_web.html" class="link nav__link">Diseño web</a></li>
+                        <li><a href="contacto.html" class="link nav__link">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--FIN HEADER-->
+        <!-- MAIN -->
+        <main>
+            <!--Section de landing con imagen -->
+            <section class="landing-aboutme">
+                <div class="container">
+                    <picture>
+                        <source srcset="img/aboutme-desktop.jpg" media="(min-width: 850px)">
+                        <source srcset="img/aboutme-mobile.jpg" media="(max-width: 850px)">
+                        <img class="landing-aboutme__image" src="aboutme-desktop.jpg" alt="">
+                    </picture>
+                </div>
+            </section>
+            <!-- Section INFO, con presentación de la página -->
+            <section class="info">
+                <div class="container container--medium">
+                    <h1 class="title title--green info__title">Sobre mí</h1>
+                    <h2 class="subtitle subtitle--green info__subtitle">¡Hola, me llamo Mayte!</h2>
+                    <p class="text text--center info__text">Soy diseñadora web en formación, y quiero ayudarte en tu proyecto para que consigas la página web que necesitas.</p>
+                </div>
+            </section>
+            <!-- Section primera, sobre mi trayectoria -->
+            <section class="trayectoria">
+                <div class="container">
+                    <div class="subcontainer__title">
+                        <h2 class="title title--white trayectoria__title">Mi recorrido</h2>
+                    </div>
+                    <div class="container--large">
+                        <div class="subcontainer__image">
+                            <img class="trayectoria__image scroll-efecto-image"
+                                 src="img/aboutme__recorrido.jpg" alt=""
+                                 x-data="{ show: false}"
+                                 x-intersect="show = true"
+                                 :class="show ? 'scroll-efecto-image--show' : ''"
+                            >
+                        </div>
+                        <div class="subcontainer__text scroll-efecto-text"
+                             x-data="{ show: false}"
+                             x-intersect="show = true"
+                             :class="show ? 'scroll-efecto-text--show' : ''"
+                        >
+                            <h3 class="subtitle subtitle--green trayectoria__subtitle">"No importa donde empiezas, sino donde acabas"</h3>
+                            <p class="text trayectoria__text">Opino que, al margen de cuales fueron tus intereses o dónde empezaste tu rrecorrido, toda experiencia, sea vital o académica, te ayuda a descubrir tus verdaderos intereses.</p>
+                            <p class="text trayectoria__text">En mi caso, estudié Historia, pero me dí cuenta que no era lo mío. Así que seguí buscando algo que realmente me apasionase, ya con la vista puesta, de lejos, en las TICs.</p>
+                            <p class="text trayectoria__text">Realicé una especialización en virtualización del patrimonio, a la vez que cursaba un máster en gestión cultural. Ahí me dí cuenta de que sí, que mi futuro laboral, fuese el que fuese, se iba a ubicar en el mundo digital. Y así fue. </p>
+                            <p class="text trayectoria__text">Empecé a formarme en el diseño y desarrollo web.
+                                Y por fin, aquí estoy, ubicada y con ganas de seguir aprendiendo y ganando experiencia.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section personal, sobre datos más personales -->
+            <section class="personal">
+                <div class="container">
+                    <div class="subcontainer__title">
+                        <h2 class="title title--white personal__title">Algo más personal</h2>
+                    </div>
+                    <div class="container--medium">
+                        <div class="subcontainer__text">
+                            <p class="text personal__text"><span class="text--green">Soy trabajadora y exigente.</span> Eso se traduce en que si me comprometo contigo, no pararé hasta terminar tu proyecto.</p>
+                            <p class="text personal__text"><span class="text--green">Soy observadora,</span> algo que considero vital en este trabajo, porque ayuda a conocer bien a tu cliente y poder ofrecerle el mejor resultado posible.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section interes, a modo de separador -->
+            <section class="interes">
+                <div class="container container--medium">
+                    <h2 class="subtitle subtitle--green interes__subtitle">¿Quieres saber algo más?</h2>
+                    <span class="interes__icon">
+                        <img  src="img/icons/flecha.svg" alt="icono de flecha">
+                    </span>
+                </div>
+            </section>
+            <!-- Section contact, con enlace a la página de contacto -->
+            <section class="contact">
+                <div class="container container--large">
+                    <div class="subcontainer__background"></div>
+                    <div class="subcontainer__text">
+                        <h2 class="title title--white title--upper contact__title">¿hablamos?</h2>
+                        <p class="text contact__text">Podemos hablar sobre tu proyecto, resolver dudas y encontrar la solución que mejor se adapte a ti. </p>
+                    </div>
+                    <div class="subcontainer__button">
+                        <button class="button button--green scroll-efecto-button"
+                                x-data="{ show: false}"
+                                x-intersect="show = true"
+                                :class="show ? 'scroll-efecto-button--show' : ''"
+                        ><a class="link link--white" href="contacto.html">contacta</a></button>
+                    </div>
+                    <div class="subcontainer__image">
+                        <img class="contact__foto" src="img/contact.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+        </main>
+    <!--FIN DEL MAIN -->
+    <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__items">
+                    <div class="subcontainer__text">
+                        <nav class="footer__nav">
+                            <ul class="footer__nav__ul">
+                                <li><a class="link footer__nav__link" href="index.html">Inicio</a></li>
+                                <li><a class="link footer__nav__link" href="#">Sobre mi</a></li>
+                                <li><a class="link footer__nav__link" href="portfolio.html">Portfolio</a></li>
+                                <li><a class="link footer__nav__link" href="disenyo_web.html">Diseño web</a></li>
+                                <li><a class="link footer__nav__link" href="contacto.html">Contacto</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="subcontainer__logo">
+                        <a href="index.html" class="link--logo">
+                            <img class="footer__logo" src="img/logo.png" alt="imagen del logo">
+                        </a>
+                    </div>
+                    <div class="subcontainer__social">
+                        <a href="#" class="link--social">
+                            <img class="footer__icon" src="img/icons/instagram.png" alt="" width="20" height="20">
+                        </a>
+                        <a href="#" class="link--social">
+                            <img class="footer__icon" src="img/icons/linkedin.png" alt="" width="20" height="20">
+                        </a>
+                    </div>
+                    <div class="subcontainer__condiciones">
+                        <nav class="footer__nav">
+                            <ul class="footer__nav__ul">
+                                <li><a class="link footer__nav__link" href="">Política de privacidad</a></li>
+                                <li><a class="link footer__nav__link" href="">Cookies</a></li>
+                                <li><a class="link footer__nav__link" href="">Aviso legal</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="footer__firma">
+                    <p class="text text--center">© Mayte Valls | diseño web - <time datetime="2022-12-23">2022</time> </p>
+                </div>
+            </div>
+        </footer>
+        <!-- FIN DEL FOOTER -->
+    </body>
+</html>

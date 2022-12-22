@@ -1,0 +1,65 @@
+// Header
+
+.header
+  z-index: 2
+  @include headerFixed(0,0,0)
+  transition: 1s
+  .container
+    @include flex (space-between, center, row)
+  &--scroll
+    background-color: $color__blanco--opacity
+  &__logo
+    padding-left: $space__s
+    width: 8rem
+    margin-top: $space__s
+    img
+      width: 100%
+  &__open
+    width: 3rem
+    background-color: transparent
+    border: 0
+    margin-right: $space__s
+  &__close
+    width: 3rem
+    background-color: transparent
+    border: 0
+  .nav
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 5rem 1fr
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: #efc99c
+    transform: translateX(100vw)
+    transition: .5s
+    &__ul
+      list-style: none
+      padding: 0
+      @include flex(center, left, column)
+      border-left: 2px solid $color__verde
+    &__link
+      font-size: $font__size--m
+      padding: $space__xs
+      margin-bottom: $space__s
+      &--selected
+        color: $color__verde
+    &__container-logo
+      width: 8rem
+      @include flex(flex-start, center, row)
+      padding: $space__s
+    &__container-button
+      @include flex(flex-end, center, row)
+      padding: $space__s
+    &__container-links
+      display: flex
+      justify-content: left
+      align-items: center
+      margin-left: $space__s
+    &--show
+      transform: translateX(0)
+
+
+

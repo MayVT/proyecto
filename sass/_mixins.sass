@@ -1,0 +1,20 @@
+// Flex
+
+@mixin flex ($justify, $align, $direction)
+  display: flex
+  justify-content: $justify
+  align-items: $align
+  flex-direction: $direction
+
+// Header fixed top
+@mixin headerFixed ($top, $left, $right)
+  position: fixed
+  top: $top
+  left: $left
+  right: $right
+
+// Image aspect square 1 / 1
+@mixin squareImg ($fit, $position)
+  aspect-ratio: 1 / 1
+  object-fit: $fit
+  object-position: $position

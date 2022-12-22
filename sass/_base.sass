@@ -1,0 +1,65 @@
+// Base
+
+body
+  margin: 0
+  font-family: $font__text
+  background-color: $color__blanco
+
+h1, h2, h3, h4, h5, h6
+  font-family: $font__title
+
+img
+  width: 100%
+
+.container
+  max-width: $container__xl
+  margin: 0 auto
+  &--large
+    max-width: $container__l
+  &--medium
+    max-width: $container__m
+  //&--small
+    max-width: $container__s//
+
+
+.link
+  display: inline-block
+  font-family: $font__text
+  font-size: $font__size--m
+  text-transform: uppercase
+  text-decoration: none
+  color: $color__negro
+  &--white
+    color: $color__blanco
+  &--green
+    color: $color__verde
+
+.text
+  font-size: $font__size--m
+  color: $color__negro
+  &--center
+    text-align: center
+  &--green
+    color: $color__verde
+    font-weight: 600
+  &--upper
+    text-transform: uppercase
+
+.title
+  font-size: $font__size--l
+  font-weight: normal
+  &--white
+    color: $color__blanco
+  &--green
+    color: $color__verde
+  &--upper
+    text-transform: uppercase
+
+.subtitle
+  font-size: $font__size--l
+  font-weight: 600
+  text-align: center
+  &--white
+    color: $color__blanco
+  &--green
+    color: $color__verde

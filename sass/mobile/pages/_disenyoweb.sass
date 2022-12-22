@@ -1,0 +1,87 @@
+// Section landing
+
+.landing--disenyo
+  .container
+    max-width: 60rem
+    height: initial
+    &--background
+      background-color: $color__verde--opacity
+      margin-top: $space__l
+      padding-top: $space__xl
+      padding-bottom: $space__xl
+      @include flex (space-around, center, column)
+  &__title
+    font-size: $font__size--xl
+  &__subtitle
+
+// Section info
+
+.info
+  .container--medium
+    margin-top: $space__l
+    margin-bottom: $space__l
+
+
+// Section whyme
+
+.whyme
+  .container
+    max-width: 60rem
+    margin-top: $space__m
+  .subcontainer__title
+    background-color: $color__verde
+    padding-top: $space__s
+    padding-bottom: $space__s
+    @include flex (center, center, row)
+  &__title
+    color: $color__blanco
+    font-size: $font__size--l
+    font-weight: 600
+  .container--medium
+    margin: 0 auto
+    margin-top: $space__m
+    padding: $space__m
+  &__subtitle
+    font-family: $font__text
+    font-weight: 600
+    text-transform: uppercase
+    padding-bottom: $space__s
+  &__list
+    list-style: none
+    border-left: 2px solid $color__verde
+
+
+
+.list__item
+  line-height: $space__m
+  padding-bottom: 2rem
+
+// Section services
+
+.services
+  .container
+    max-width: 100vw
+    margin-top: $space__l
+  .subcontainer__title
+    background-color: $color__verde
+    padding: $space__s
+    @include flex (center, center, row)
+  &__title
+    color: $color__blanco
+    font-size: $font__size--l
+    font-weight: 600
+    text-align: center
+  .container--medium
+    margin: 0 auto
+    margin-top: $space__m
+    padding: $space__m
+  &__subtitle
+    font-family: $font__text
+    font-weight: 600
+    text-transform: uppercase
+    padding-bottom: $space__s
+    padding-top: $space__s
+  &__list
+    list-style: none
+    padding-bottom: $space__m
+    border-left: 2px solid $color__verde

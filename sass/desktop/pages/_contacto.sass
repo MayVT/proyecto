@@ -1,0 +1,58 @@
+// Section landing
+
+.landing--contact
+  .container
+    max-width: 100vw
+    &--background
+      &--yellow
+        background-color: $color__amarillo
+        margin-top: 5rem
+        padding: $space__l
+        @include flex (center, center, column)
+  &__title
+    font-size: $font__size--xl
+    margin-bottom: $space__m
+
+// Section form
+
+.form
+  .container--large
+    background-color: $color__blanco
+    padding: $space__m
+    @include flex (space-around, flex-start, row)
+  &__text
+    margin-top: $space__m
+    margin-right: $space__l
+  &__email
+    width: 10rem
+    display: inline-block
+  &__content
+    width: 60rem
+  &__label
+    margin-top: $space__m
+  label
+    color: $color__verde
+    font-weight: 600
+  input
+    width: 30rem
+    height: 2rem
+    background-color: $color__blanco
+    border-top: 1px solid transparent
+    border-left: 1px solid transparent
+    border-bottom: 1px solid $color__verde
+    box-shadow: .1rem .1rem $color__verde--opacity
+  span
+    text-decoration: underline
+  textarea
+    width: 30rem
+    height: 10rem
+    border: 1px solid $color__verde
+    box-shadow: .1rem .1rem $color__verde--opacity
+  .check
+    width: initial
+    box-shadow: none
+
+
+
+
+

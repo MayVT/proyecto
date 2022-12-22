@@ -1,0 +1,50 @@
+// Footer
+
+.footer
+  .container
+    max-width: 100vw
+    margin-top: $space__xl
+    @include flex (center, center, column)
+  &__items
+    width: 100%
+    @include flex (space-evenly, center, row)
+    border-top: 1px solid $color__negro
+    border-bottom: 1px solid $color__negro
+  .subcontainer__text
+    padding-right: $space__m
+    padding-left: $space__m
+    padding-top: $space__s
+    padding-bottom: $space__s
+  &__nav
+    &__ul
+      list-style: none
+      padding: 0
+      @include flex (center, center, column)
+    &__link
+      padding: .2rem
+      text-decoration: none
+      color: $color__negro
+      font-size: $font__size--s
+  .subcontainer__logo
+    @include flex (center, center, column)
+    .link--logo
+      display: block
+      @include flex(center, center, column)
+  &__logo
+    width: 50%
+    background-size: cover
+    background-position: center
+  .subcontainer__social
+    @include flex (center, center, column)
+    margin-top: $space__s
+    .link--social
+      display: block
+      width: 1.2rem
+      margin-bottom: $space__m
+  &__firma
+    color: $color__negro
+
+
+
+
+

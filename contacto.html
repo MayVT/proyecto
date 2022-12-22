@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <title>Mayte Valls | Contacto</title>
+        <link rel="icon" type="image/png" href="favicon.png">
+        <!-- FALTA AÑADIR PLANTILLA -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <!-- Css -->
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 850px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 850px)">
+        <!-- fin CSS -->
+        <!-- JavaScript -->
+        <script src="https://unpkg.com/alpinejs" defer></script>
+        <!-- fin JavaScript -->
+    </head>
+    <body>
+    <!--HEADER-->
+    <header
+            class="header"
+            x-data="{ open: false, isTopScroll: true }" @scroll.window="isTopScroll = window.pageYOffset === 0"
+            :class="isTopScroll ? '' : 'header--scroll'"
+    >
+        <div class="container">
+            <a class="header__logo" href="index.html">
+                <img class="header__image" src="img/logo.png" alt="logo">
+            </a>
+            <!-- Button con icono para abrir el menú, ANTES DEL NAV -->
+            <button class="header__open" @click="open = true" >
+                <img src="img/icons/menu_icon_open.svg" alt="Abrir menu">
+            </button>
+            <!-- Nav-->
+            <nav class="nav" :class="open ? 'nav--show' : ''">
+                <!-- Imagen de logo para mostrar en el menú abierto -->
+                <div class="nav__container-logo">
+                    <a class="nav__logo" href="index.html">
+                        <img class="header__image" src="img/logo.png" alt="logo">
+                    </a>
+                </div>
+                <!-- Button con icono para cerrar el menú, DENTRO DEL NAV-->
+                <div class="nav__container-button">
+                    <button class="header__close" @click="open = false">
+                        <img src="img/icons/menu_icon_close.svg" alt="Cerrar menu">
+                    </button>
+                </div>
+                <div class="nav__container-links">
+                    <ul class="nav__ul">
+                        <li><a href="index.html" class="link nav__link">Inicio</a></li>
+                        <li><a href="sobre_mi.html" class="link nav__link">Sobre mi</a></li>
+                        <li><a href="portfolio.html" class="link nav__link">Portfolio</a></li>
+                        <li><a href="disenyo_web.html" class="link nav__link">Diseño web</a></li>
+                        <li><a href="contacto.html" class="link nav__link nav__link--selected">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--FIN HEADER-->
+        <!-- MAIN -->
+        <main>
+            <!-- Section de landing, con color de fondo y título -->
+            <section class="landing--contact">
+                <div class="container container--background container--background--yellow">
+                    <h1 class="title title--green title--upper landing__title">Hablemos</h1>
+                </div>
+            </section>
+            <!-- Section form -->
+            <section class="form">
+                <div class="container container--large">
+                    <div class="subcontainer__text">
+                        <p class="text form__text">Puedes rellenar el siguiente formulario para contactar conmigo y contarme tu proyecto, tus necesidades o exponerme tus dudas</p>
+                        <p class="text form__text">o bien enviarme un correo a:</p>
+                        <span class="form__email">
+                            <img src="img/email-image.png" alt="imagen con correo electrónico">
+                        </span>
+                    </div>
+                    <form class="form__content" method="post">
+                        <p class="form__label">
+                            <label>
+                                Nombre:
+                            </label>
+                        </p>
+                        <input type="text" name="nombre" placeholder="Introduce aqui tu nombre" required>
+                        <p class="form__label">
+                            <label>
+                               Email:
+                            </label>
+                        </p>
+                        <input type="email" name="nombre" placeholder="Introduce aqui tu email" required>
+                        <p class="form__label">
+                            <label>
+                               Mensaje:
+                            </label>
+                        </p>
+                        <textarea name="mensaje" placeholder="Introduce aqui tu mensaje" maxlength="100" required></textarea>
+                        <p class="form__label">
+                            <label>
+                                <input class="check" type="checkbox" name="condiciones" required>
+                                He leído y acepto la <span>política de privacidad.</span>
+                            </label>
+                        </p>
+                        <button class="button button--yellow button--form" type="submit" name="enviar">ENVIAR</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <!--FIN DEL MAIN -->
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__items">
+                    <div class="subcontainer__text">
+                        <nav class="footer__nav">
+                            <ul class="footer__nav__ul">
+                                <li><a class="link footer__nav__link" href="index.html">Inicio</a></li>
+                                <li><a class="link footer__nav__link" href="sobre_mi.html">Sobre mi</a></li>
+                                <li><a class="link footer__nav__link" href="portfolio.html">Portfolio</a></li>
+                                <li><a class="link footer__nav__link" href="disenyo_web.html">Diseño web</a></li>
+                                <li><a class="link footer__nav__link" href="#">Contacto</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="subcontainer__logo">
+                        <a href="index.html" class="link--logo">
+                            <img class="footer__logo" src="img/logo.png" alt="imagen del logo">
+                        </a>
+                    </div>
+                    <div class="subcontainer__social">
+                        <a href="#" class="link--social">
+                            <img class="footer__icon" src="img/icons/instagram.png" alt="" width="20" height="20">
+                        </a>
+                        <a href="#" class="link--social">
+                            <img class="footer__icon" src="img/icons/linkedin.png" alt="" width="20" height="20">
+                        </a>
+                    </div>
+                    <div class="subcontainer__condiciones">
+                        <nav class="footer__nav">
+                            <ul class="footer__nav__ul">
+                                <li><a class="link footer__nav__link" href="">Política de privacidad</a></li>
+                                <li><a class="link footer__nav__link" href="">Cookies</a></li>
+                                <li><a class="link footer__nav__link" href="">Aviso legal</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="footer__firma">
+                    <p class="text text--center">© Mayte Valls | diseño web - <time datetime="2022-12-23">2022</time> </p>
+                </div>
+            </div>
+        </footer>
+        <!-- FIN DEL FOOTER -->
+    </body>
+</html>

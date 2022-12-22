@@ -1,0 +1,27 @@
+
+.landing--portfolio
+  .container
+    max-width: 100vw
+    &--background
+      background-color: $color__verde--opacity
+      margin-top: 5rem
+      padding: $space__l
+      @include flex (center, center, column)
+  &__title
+    font-size: $font__size--xl
+    margin-bottom: $space__m
+
+
+// Section projects
+.projects
+  .container
+  .container--large
+    margin-top: $space__l
+    @include flex (space-evenly, center, row)
+    flex-wrap: wrap
+  .subcontainer__image
+      background-color: lightgrey
+      width: 20rem
+      height: 20rem
+      margin-right: $space__s
+      margin-bottom: $space__m

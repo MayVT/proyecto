@@ -1,0 +1,104 @@
+// Section landing
+.landing-aboutme
+  margin-top: 5rem
+  .container
+    width: 100vw
+    height: 90vh
+  &__image
+    width: 100%
+    height: 100%
+    background-size: cover
+    background-position: center
+    object-fit: cover
+    object-position: centers
+
+// Section info
+
+.info
+  &__title
+  &__subtitle
+    font-weight: 600
+
+
+// Section trayectoria
+
+.trayectoria
+  .container
+    max-width: 100vw
+    margin-top: $space__xl
+  .subcontainer__title
+    background-color: $color__verde
+    @include flex (center, center, row)
+  &__title
+    color: $color__blanco
+    font-size: $font__size--l
+    font-weight: 600
+  .container--large
+    margin: 0 auto
+    margin-top: $space__l
+    @include flex (space-around, center, row)
+  .subcontainer__image
+    width: 20rem
+    margin-right: $space__m
+    .scroll-efecto-image
+      opacity: 0
+      transform: translateX(-20rem)
+      transition: 1s
+      transition-delay: .3s
+      &--show
+        opacity: 1
+        transform: translateX(0)
+        box-shadow: -1rem -1rem $color__amarillo
+  .subcontainer__text
+    width: 30rem
+    padding: .5rem
+    @include flex (center, center, column)
+  .scroll-efecto-text
+    opacity: 0
+    transform: translateX(20rem)
+    transition: 1s
+    transition-delay: .1s
+    &--show
+      opacity: 1
+      transform: translateX(0)
+  &__subtitle
+    padding-bottom: $space__m
+    font-size: $font__size--l
+
+
+
+// Section personal
+
+.personal
+  .container
+    max-width: 100vw
+    margin-top: $space__xl
+  .subcontainer__title
+    background-color: $color__verde
+    @include flex (center, center, row)
+  &__title
+    font-weight: 600
+  .container--medium
+    margin: 0 auto
+    margin-top: $space__l
+
+
+// Section interes
+
+.interes
+  background-color: $color__amarillo
+  .container--medium
+    margin-top: $space__xl
+    padding-top: $space__m
+    @include flex (center, center, column)
+  &__icon
+    width: 3rem
+  &__subtitle
+    font-size: $font__size--l
+
+
+// Section contact
+
+.contact
+  .container--large
+    margin-top: $space__l

@@ -1,0 +1,150 @@
+// Section landing
+
+.landing-home
+  margin-top: 5rem
+  .container
+    width: 100vw
+    height: 90vh
+  &__image
+    width: 100%
+    height: 100%
+    background-size: cover
+    background-position: center
+    object-fit: cover
+    object-position: center
+
+// Section info
+//margin-top: m //provisional: xl hasta que haya imagen de landing
+.info
+  margin-top: $space__l
+  .container
+    &--medium
+      @include flex (center, center, column)
+  &__title
+    font-size: $font__size--xl
+    margin-bottom: $space__l
+  &__text
+    margin-top: 0
+  button
+    margin-top: $space__l
+
+
+// Section about me
+
+.about
+  .container
+    &--large
+      max-width: 100vw
+      margin-top: $space__l
+      display: grid
+      grid-template-columns: 1fr 20rem 20rem 1fr
+      grid-template-rows: 1fr 10rem
+      column-gap: 8rem
+      row-gap: $space__s
+  .subcontainer__background
+    grid-column: 1 / 5
+    grid-row: 1 / 2
+    background-color: $color__amarillo
+  .subcontainer__image
+    grid-column: 2 / 3
+    grid-row: 1 / 2
+    @include flex(center, center, column)
+    .scroll-efecto-image
+      opacity: 0
+      transform: translateX(-20rem)
+      transition: 1s
+      transition-delay: .2s
+      &--show
+        opacity: 1
+        transform: translateX(0)
+  &__foto
+    width: 100%
+    @include squareImg(cover, right)
+    margin-top: 1rem
+    margin-bottom: 1rem
+  .subcontainer__text
+    grid-column: 3 / 4
+    grid-row: 1 / 2
+    padding: $space__m
+    @include flex(center, center, column)
+    .scroll-efecto-text
+      opacity: 0
+      transform: translateX(20rem)
+      transition: 1s
+      transition-delay: .1s
+      &--show
+        opacity: 1
+        transform: translateX(0)
+  &__title
+    text-align: center
+    font-weight: 600
+  .subcontainer__button
+    grid-column: 3 / 4
+    grid-row: 2 / 3
+    @include flex(center, center, column)
+    .scroll-efecto-button
+      opacity: 0
+      transform: translateX(20rem)
+      transition: 1s
+      transition-delay: .2s
+      &--show
+        opacity: 1
+        transform: translateX(0)
+
+
+// Section portfolio
+
+.portfolio
+  .container
+    margin-top: $space__l
+    @include flex (center, center, column)
+    .container
+      margin: $space__l
+      @include flex (space-between, center, row)
+    .subcontainer__image
+      background-color: lightgrey
+      width: 20rem
+      height: 20rem
+      margin-left: $space__s
+
+
+// Section contact
+
+.contact
+  .container
+    &--large
+      max-width: 100vw
+      margin-top: $space__xl
+      display: grid
+      grid-template-columns: 1fr 20rem 20rem 1fr
+      grid-template-rows: 1fr 10rem
+      column-gap: 8rem
+      row-gap: $space__s
+  .subcontainer__background
+    background-color: $color__verde
+    grid-column: 1 / 5
+    grid-row: 1 / 2
+  .subcontainer__image
+    grid-column: 3 / 4
+    grid-row: 1 / 2
+    @include flex (center, center, column)
+  &__foto
+    width: 100%
+    @include squareImg(cover, right)
+  .subcontainer__text
+    grid-column: 2 / 3
+    grid-row: 1 / 2
+    @include flex (center, left, column)
+  .subcontainer__button
+    grid-column: 2 / 3
+    grid-row: 2 / 3
+    @include flex(center, left, column)
+    .scroll-efecto-button
+      opacity: 0
+      transform: translateY(5rem)
+      transition: 1s
+      transition-delay: .1s
+      &--show
+        opacity: 1
+        transform: translateY(0)
+

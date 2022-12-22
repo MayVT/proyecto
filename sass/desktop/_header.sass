@@ -1,0 +1,47 @@
+//Header
+
+.header
+  z-index: 2
+  @include headerFixed(0,0,0)
+  transition: 1s
+  .container
+    max-width: 80rem
+    @include flex (space-between, center, row)
+  &--scroll
+    background-color: $color__blanco--opacity
+  &__logo
+    padding-left: $space__l
+    width: 10rem
+    height: 5rem
+    margin-top: $space__s
+  &__open
+    display: none
+  &__close
+    display: none
+  .nav
+    padding-right: $space__l
+    &__ul
+      list-style: none
+      padding: 0
+      @include flex (center, center, row)
+    &__link
+      padding: $space__s
+      border-bottom: 2px solid transparent
+      &--selected
+        border-bottom: 2px solid $color__verde
+        color: $color__verde
+      &:hover
+        color: $color__verde
+        border-bottom: 2px solid $color__verde
+    &__container-logo
+      display: none
+    &__container-button
+      display: none
+    &__container-links
+      display: flex
+      justify-content: center
+      align-items: center
+
+
+
+
