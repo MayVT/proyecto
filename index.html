@@ -85,31 +85,15 @@
                 <div class="container container--large">
                     <div class="subcontainer__background"></div>
                     <div class="subcontainer__image">
-                        <img class="about__foto scroll-efecto-image"
-                             src="img/aboutme-image.jpeg" alt="foto personal"
-                             x-data="{ mostrar: false}"
-                             x-intersect="mostrar = true"
-                             :class="mostrar ? 'scroll-efecto-image--show' : ''"
-                        >
+                        <img class="about__foto" 
+                             src="img/aboutme-image.jpeg" alt="foto personal">
                     </div>
                     <div class="subcontainer__text">
-                        <h2 class="title title--green about__title scroll-efecto-text"
-                        x-data="{ show: false}"
-                        x-intersect="show = true"
-                        :class="show ? 'scroll-efecto-text--show' : ''"
-                        >¡Hola, me llamo Mayte!</h2>
-                        <p class="text text--center about__text scroll-efecto-text"
-                           x-data="{ show: false}"
-                           x-intersect="show = true"
-                           :class="show ? 'scroll-efecto-text--show' : ''"
-                        >Soy diseñadora web en formación, y quiero ayudarte en tu proyecto para que consigas la página web que necesitas. </p>
+                        <h2 class="title title--green about__title">¡Hola, me llamo Mayte!</h2>
+                        <p class="text text--center about__text">Soy diseñadora web en formación, y quiero ayudarte en tu proyecto para que consigas la página web que necesitas. </p>
                     </div>
                     <div class="subcontainer__button">
-                        <button class="button button--yellow scroll-efecto-button"
-                        x-data="{ show: false}"
-                        x-intersect="show = true"
-                        :class="show ? 'scroll-efecto-button--show' : ''"
-                        ><a class="link link--green" href="sobre_mi.html">conóceme mejor</a></button>
+                        <button class="button button--yellow"><a class="link link--green" href="sobre_mi.html">conóceme mejor</a></button>
                     </div>
                 </div>
             </section>
